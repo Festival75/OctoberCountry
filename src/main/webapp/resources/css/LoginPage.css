@@ -1,0 +1,13 @@
+#Container{
+    width: 800px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+#Container input{
+    font-family: "Comic Sans MS", "Liberation Sans", sans-serif;
+    margin: auto;
+    padding: 0px;
+    float: left;
+    display: block;
+}

@@ -1,0 +1,53 @@
+#Container{
+    width: 800px;
+    height: auto;
+    margin: 11px auto 21px;
+    font-family: "Liberation Sans Narrow", sans-serif;
+    font-size: 17px;
+}
+#Container a{
+    text-decoration: none;
+    color: black;
+}
+#Header{
+    height: 150px;
+    background-color: red;
+}
+#Menu{
+    height: 50px;
+    background-color: black;
+}
+#SideBar{
+    width: 150px;
+    height: 400px;
+    background-color: yellow;
+    float: left;
+}
+#MainBody{
+    width: 650px;
+    height: 400px;
+    background-color: blue;
+    float: right;
+}
+#Footer{
+    height: 100px;
+    background-color: darkgray;
+    clear: both;
+
+}
+#hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+#hvr-grow:hover,
+#hvr-grow:focus,
+#hvr-grow:active {
+    transform: scale(1.1);
+}
