@@ -11,13 +11,15 @@
     </style>
 </head>
 <body>
-<div id="Container">
-    <div id="Logo"></div>
-    <div id="Input"></div>
-    <div id="Buttons">
-        <input type="submit" value="Enter">
-        <input type="submit" value="Register">
+<div id="Background">
+    <div id="Empty"></div>
+    <div id="Container">
+        <div id="Hello">
+       </div>
+        <div id="Input"></div>
     </div>
 </div>
+
+
 </body>
 </html>
