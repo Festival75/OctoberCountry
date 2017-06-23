@@ -4,6 +4,7 @@ import com.festival.user.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +21,13 @@ public class Registration {
     }
 
     @RequestMapping("/reg")
-    public ModelAndView register(HttpServletResponse response, HttpServletRequest request){
+    public ModelAndView register(@RequestParam String action, HttpServletResponse response, HttpServletRequest request){
+
         ModelAndView mv = new ModelAndView();
+        if (action.equals("Cancel")){
+            mv.setViewName("login");
+            return mv;
+        }else{
         Boolean added;
         String login = request.getParameter("login");
         String password = request.getParameter("password");
@@ -37,6 +43,7 @@ public class Registration {
             mv.addObject("error","Such user already exist!");
         }
         return mv;
+        }
     }
 
 }
