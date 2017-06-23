@@ -5,8 +5,6 @@ import com.festival.user.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
-import java.awt.*;
-import java.sql.ResultSet;
 import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
