@@ -35,7 +35,7 @@ public class Auth {
             User user = userDAO.getUser(login);
             if (userDAO.getUser(login) == null) {
                 mv.setViewName("login");
-                mv.addObject("error", "User not found!");
+                mv.addObject("error", "Combination of user/password is not found!");
                 return mv;
             } else {
                 String loginDB = user.getLogin();

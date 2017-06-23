@@ -5,6 +5,7 @@ import com.festival.user.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
+import java.awt.*;
 import java.sql.ResultSet;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public class UserDAOImpl implements UserDAO {
 
     private JdbcTemplate template;
 
-    public UserDAOImpl (DataSource dataSource){
+    public UserDAOImpl(DataSource dataSource) {
         template = new JdbcTemplate(dataSource);
     }
 
@@ -57,21 +58,23 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public void createUpdate(String login, String password, String firstName, String secondName, String email, String phone) {
+    public Boolean createUpdate(String login, String password, String firstName, String secondName, String email, String phone) {
 
-        if (getUser(login)==null){
+        if (getUser(login) == null) {
 
             String sql = "INSERT INTO users (user_login, user_password, user_firstname, user_secondname, user_email, user_phone)" +
-                    "VALUES ('"+login+"','"+password+"','"+firstName+"','"+secondName+"','"+email+"','"+phone+"')";
+                    "VALUES ('" + login + "','" + password + "','" + firstName + "','" + secondName + "','" + email + "','" + phone + "')";
             template.update(sql);
+            return true;
 
+        } else {
+            return false;
 
-        }else{
-            String sql = "UPDATE users " +
+/*            String sql = "UPDATE users " +
                     "SET user_login = '"+login+"', user_password = '"+password+"', user_firstname = '"+firstName+"', user_secondname = '"+secondName+"', user_email = '"+email+"', user_phone = '"+phone+"'" +
                     "WHERE user_login = '"+login+"'";
-            template.update(sql);
-            }
+            template.update(sql);*/
+        }
 
     }
 

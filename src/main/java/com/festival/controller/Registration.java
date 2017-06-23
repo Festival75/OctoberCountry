@@ -24,14 +24,20 @@ public class Registration {
     @RequestMapping("/reg")
     public ModelAndView register(HttpServletResponse response, HttpServletRequest request){
         ModelAndView mv = new ModelAndView();
+        Boolean added;
         String login = request.getParameter("login");
         String password = request.getParameter("password");
         String firstname = request.getParameter("firstname");
         String secondname = request.getParameter("secondname");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
-        userDAO.createUpdate(login,password,firstname,secondname,email,phone);
+        added = userDAO.createUpdate(login,password,firstname,secondname,email,phone);
         mv.setViewName("login");
+        if (added){
+            mv.addObject("error", "New user registered!");
+        }else {
+            mv.addObject("error","Such user already exist!");
+        }
         return mv;
     }
 
