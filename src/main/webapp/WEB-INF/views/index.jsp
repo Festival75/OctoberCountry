@@ -11,13 +11,13 @@
     </style>
 </head>
 <body>
-
 <%
     String name = (String) session.getAttribute("login");
-    if (name == null) {
-        name = "";
+    if (name==null){
+        response.sendRedirect("/SpringMVC/");
     }
 %>
+
 <div id="Background">
     <h2>Hello <%=name%>!</h2>
 </div>

@@ -59,13 +59,12 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public void createUpdate(String login, String password, String firstName, String secondName, String email, String phone) {
 
-
-
         if (getUser(login)==null){
 
             String sql = "INSERT INTO users (user_login, user_password, user_firstname, user_secondname, user_email, user_phone)" +
                     "VALUES ('"+login+"','"+password+"','"+firstName+"','"+secondName+"','"+email+"','"+phone+"')";
             template.update(sql);
+
 
         }else{
             String sql = "UPDATE users " +

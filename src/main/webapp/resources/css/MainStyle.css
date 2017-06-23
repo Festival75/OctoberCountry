@@ -1,3 +1,10 @@
+:root{
+    --primarycolor: #263238;
+    --lightcolor: #4f5b62;
+    --darkcolor: #000a12;
+    --textcolor: #ffffff;
+}
+
 #Background{
     width: 100%;
     height: 100%;
@@ -6,11 +13,11 @@
     margin-left: 0px;
     margin-right: 0px;
 
-    background-color: #4caf50;
+    background-color: var(--lightcolor);
 }
 #Background input[type=submit]{
-    background-color: #4caf50;
-    color: black;
+    background-color: var(--darkcolor);
+    color: var(--textcolor);
     padding: 10px 22px;
     text-align: center;
     text-decoration: none;
@@ -20,32 +27,34 @@
     width: 49%;
 }
 
-#Input input[type=text] {
+#Background input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     font-size: large;
     text-align: center;
+
 }
-#Input input[type=password] {
+#Background input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     font-size: large;
     text-align: center;
+
 }
 #Container{
     float: inherit;
     width: 550px;
-    height: 350px;
+    height: 450px;
     margin-bottom: auto;
     margin-left: 30%;
     margin-right: 30%;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    background-color: #087f23;
+    background-color: var(--primarycolor);
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
     padding: 10px;
 }
@@ -59,7 +68,7 @@
 
 }
 #Input{
-    margin-top: 15%;
+    margin-top: 25%;
     width: 250px;
     height: 350px;
     float: right;

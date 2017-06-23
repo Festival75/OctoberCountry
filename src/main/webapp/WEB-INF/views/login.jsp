@@ -11,6 +11,7 @@
     </style>
 </head>
 <body>
+
 <div id="Background">
     <div id="Empty"></div>
     <div id="Container">
@@ -18,8 +19,8 @@
         </div>
         <div id="Input">
             <form action="/OctoberCountry/auth" method="post">
-                <input type="text" name="login" value="Username"><br>
-                <input type="password" name="password" value="password"><br>
+                <input type="text" name="login" placeholder="Username" autocomplete="off"><br>
+                <input type="password" name="password" placeholder="Password" autocomplete="off"><br>
                 <input type="submit" name="action" value="Log In" >
                 <input type="submit" name="action" value="Register" >
             </form>
